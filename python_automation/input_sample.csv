@@ -1,0 +1,4 @@
+claim_id,insured_name,loss_date,amount,description
+001,JOHN DOE,8/1/2025,$1,200.50, Roof leak from storm
+002,jane smith,2025-08-03,950, water heater failure
+003,BOB Johnson,08-05-2025, 300.0 , hail damage

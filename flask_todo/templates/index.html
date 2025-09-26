@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TK To‑Do</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f7fafc;color:#111}
+    header{background:#0ea5e9;color:#fff;padding:16px}
+    main{max-width:700px;margin:24px auto;background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    form{display:flex;gap:8px;margin-bottom:16px}
+    input[type=text]{flex:1;padding:10px;border:1px solid #e5e7eb;border-radius:8px}
+    button{padding:10px 14px;border:0;border-radius:8px;background:#0ea5e9;color:#fff;font-weight:700;cursor:pointer}
+    ul{list-style:none;padding:0;margin:0}
+    li{display:flex;align-items:center;justify-content:space-between;padding:10px;border-bottom:1px solid #f1f5f9}
+    .done{opacity:.6;text-decoration:line-through}
+    .row{display:flex;gap:8px}
+    .small{background:#e11d48}
+    .toggle{background:#10b981}
+  </style>
+</head>
+<body>
+<header><h1>TK To‑Do</h1></header>
+<main>
+  <form method="post">
+    <input type="text" name="title" placeholder="Add a task..." required />
+    <button type="submit">Add</button>
+  </form>
+  <ul>
+    {% for id, title, done in todos %}
+      <li>
+        <span class="{{'done' if done else ''}}">{{ title }}</span>
+        <div class="row">
+          <form method="post" action="/toggle/{{ id }}">
+            <button class="toggle" type="submit">{{ 'Undo' if done else 'Done' }}</button>
+          </form>
+          <form method="post" action="/delete/{{ id }}">
+            <button class="small" type="submit">Delete</button>
+          </form>
+        </div>
+      </li>
+    {% else %}
+      <li>No tasks yet. Add one above.</li>
+    {% endfor %}
+  </ul>
+</main>
+</body>
+</html>
