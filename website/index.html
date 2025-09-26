@@ -1,46 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Core Meta -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Thomas Keyt — remote junior software developer focused on Python, HTML, CSS, and SQL. Clean projects, fast delivery, strong documentation." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- Canonical / Favicons (replace paths as needed) -->
+  <link rel="canonical" href="https://your-domain.com" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Thomas Keyt – Portfolio" />
+  <meta property="og:description" content="Remote junior software developer. Python • HTML • CSS • SQL." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com" />
+  <meta property="og:image" content="https://your-domain.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <title>Thomas Keyt – Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Thomas Keyt</h1>
-    <p>Remote Junior Software Developer • Python • HTML • CSS • SQL</p>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Skip to content for keyboard/screen reader users -->
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <!-- Site Header / Hero -->
+  <header role="banner" class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1 class="headline">Thomas Keyt</h1>
+        <p class="tagline">Remote Junior Software Developer • Python • HTML • CSS • SQL</p>
+      </div>
+
+      <nav aria-label="Primary" class="primary-nav">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="btn btn-ghost" aria-pressed="false" aria-label="Toggle dark mode">
+          <span class="icon" aria-hidden="true">🌗</span><span class="visually-hidden">Toggle theme</span>
+        </button>
+      </nav>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:thomas.keyt71@gmail.com">Hire Me</a>
+        <a class="btn btn-outline" href="Thomas_Keyt_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <a class="btn btn-ghost with-icon" href="https://github.com/gregkeyt7" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.65 2 12.3c0 4.52 2.87 8.35 6.84 9.71.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.12-1.52-1.12-1.52-.92-.65.07-.64.07-.64 1.02.07 1.56 1.07 1.56 1.07.9 1.58 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.15-4.56-5.12 0-1.13.39-2.06 1.04-2.78-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.06A9.2 9.2 0 0 1 12 7.07c.85 0 1.7.12 2.49.35 1.9-1.34 2.74-1.06 2.74-1.06.55 1.4.2 2.44.1 2.7.65.72 1.04 1.65 1.04 2.78 0 3.98-2.35 4.85-4.58 5.11.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .26.18.58.69.48A10.3 10.3 0 0 0 22 12.3C22 6.65 17.52 2 12 2Z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a class="btn btn-ghost with-icon" href="https://linkedin.com/in/thomas-keyt" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M19 3A2.94 2.94 0 0 1 22 6v12a2.94 2.94 0 0 1-3 3H5a2.94 2.94 0 0 1-3-3V6a2.94 2.94 0 0 1 3-3h14M8.34 18.34V9.75H5.69v8.59h2.65m-.1-9.81a1.53 1.53 0 1 0-1.53-1.53a1.53 1.53 0 0 0 1.53 1.53m11.1 9.81v-4.73c0-2.41-1.29-3.53-3.02-3.53a2.62 2.62 0 0 0-2.36 1.3h-.05V9.75h-2.64c.04 1 .01 8.59.01 8.59h2.64v-4.8c0-.26.02-.53.1-.72a1.44 1.44 0 0 1 1.34-.95c.95 0 1.33.72 1.33 1.77v4.69Z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>Detail‑oriented career‑switcher with 15+ years in analysis & documentation, now focused on shipping code.</p>
-    </section>
+  <main id="main" role="main">
+    <div class="container stack-lg">
+      <!-- Projects -->
+      <section id="projects" class="card-section" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Projects</h2>
+          <p class="muted">Practical tools that clean data, automate tasks, and ship quickly.</p>
+        </div>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Python CSV Cleaner</strong> — normalizes messy claim data (dates, amounts, casing).</li>
-        <li><strong>Flask To‑Do</strong> — basic CRUD web app with SQLite.</li>
-        <li><strong>This Site</strong> — responsive HTML/CSS, no frameworks.</li>
-      </ul>
-    </section>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Python CSV Cleaner</h3>
+            <p>Normalizes messy claim data (dates, amounts, casing) and outputs a verified CSV with a validation report.</p>
+            <ul class="badges">
+              <li>Python</li><li>csv/argparse</li><li>Tests</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-sm" href="https://github.com/gregkeyt7" target="_blank" rel="noopener">Code</a>
+              <!-- <a class="btn btn-sm btn-outline" href="#" target="_blank" rel="noopener">Demo</a> -->
+            </div>
+          </article>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:thomas.keyt71@gmail.com">thomas.keyt71@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/YOUR_USERNAME" target="_blank">github.com/YOUR_USERNAME</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin.com/in/YOUR_LINKEDIN</a></p>
-    </section>
+          <article class="card">
+            <h3>Flask To-Do</h3>
+            <p>Minimal CRUD app with Flask + SQLite. Clean structure, accessible UI, Dockerfile for easy local run.</p>
+            <ul class="badges">
+              <li>Flask</li><li>SQLite</li><li>HTML/CSS</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-sm" href="https://github.com/gregkeyt7" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Portfolio Site</h3>
+            <p>Framework-free, responsive site with design tokens, dark mode, strong a11y, and print styles.</p>
+            <ul class="badges">
+              <li>HTML</li><li>CSS</li><li>A11y</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-sm" href="https://github.com/gregkeyt7" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="card-section" aria-labelledby="skills-title">
+        <div class="section-head">
+          <h2 id="skills-title">Skills</h2>
+          <p class="muted">Shipping clean, maintainable code with strong documentation and testing.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Core</h3>
+            <ul class="list-columns">
+              <li>Python</li>
+              <li>Flask</li>
+              <li>HTML/CSS</li>
+              <li>SQL/SQLite</li>
+              <li>Git/GitHub</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Practice</h3>
+            <ul class="list-columns">
+              <li>Unit Tests</li>
+              <li>CLI Tools</li>
+              <li>Data Cleaning</li>
+              <li>REST Basics</li>
+              <li>Accessibility</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Tooling</h3>
+            <ul class="list-columns">
+              <li>Docker (basics)</li>
+              <li>VS Code</li>
+              <li>Linux shell</li>
+              <li>GitHub Actions (intro)</li>
+              <li>Markdown</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="card-section" aria-labelledby="about-title">
+        <div class="section-head">
+          <h2 id="about-title">About</h2>
+        </div>
+        <div class="prose">
+          <p>Detail-oriented career switcher with 15+ years in analysis and documentation, now focused on shipping code. I build small, useful tools that automate repetitive workflows and improve data quality.</p>
+          <p>Mission: deliver simple, reliable software with crisp docs, tests, and fast iteration.</p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="card-section" aria-labelledby="contact-title">
+        <div class="section-head">
+          <h2 id="contact-title">Contact</h2>
+          <p class="muted">Fastest response via email. I’m remote-first.</p>
+        </div>
+
+        <div class="contact-grid">
+          <p><strong>Email:</strong> <a href="mailto:thomas.keyt71@gmail.com">thomas.keyt71@gmail.com</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/gregkeyt7" target="_blank" rel="noopener">github.com/gregkeyt7</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/thomas-keyt" target="_blank" rel="noopener">linkedin.com/in/thomas-keyt</a></p>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <small>© 2025 Thomas Keyt</small>
+  <footer role="contentinfo" class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Thomas Keyt</small>
+      <a class="back-to-top" href="#top" id="backToTop" aria-label="Back to top">↑ Back to top</a>
+    </div>
   </footer>
+
+  <!-- JSON-LD: Person + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thomas Keyt",
+    "jobTitle": "Software Developer",
+    "email": "mailto:thomas.keyt71@gmail.com",
+    "url": "https://your-domain.com",
+    "sameAs": [
+      "https://github.com/gregkeyt7",
+      "https://www.linkedin.com/in/thomas-keyt"
+    ],
+    "knowsAbout": ["Python", "HTML", "CSS", "SQL", "Flask", "SQLite"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Thomas Keyt – Portfolio",
+    "url": "https://your-domain.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://your-domain.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Tiny enhancements: year + theme toggle + back-to-top -->
+  <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle (respects OS by default; stores preference)
+    (function () {
+      const storageKey = 'theme';
+      const className = 'theme-dark';
+      const toggle = document.getElementById('theme-toggle');
+
+      // Set initial state from storage if any
+      const stored = localStorage.getItem(storageKey);
+      if (stored === 'dark') document.documentElement.classList.add(className);
+      if (toggle) toggle.setAttribute('aria-pressed', document.documentElement.classList.contains(className));
+
+      function setTheme(dark) {
+        document.documentElement.classList.toggle(className, dark);
+        localStorage.setItem(storageKey, dark ? 'dark' : 'light');
+        toggle && toggle.setAttribute('aria-pressed', String(dark));
+      }
+
+      toggle && toggle.addEventListener('click', () => {
+        setTheme(!document.documentElement.classList.contains(className));
+      });
+    })();
+
+    // Back to top visible after scroll
+    (function(){
+      const link = document.getElementById('backToTop');
+      if (!link) return;
+      const onScroll = () => {
+        if (window.scrollY > 600) link.classList.add('show');
+        else link.classList.remove('show');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+
+  <!-- Optional: Privacy-friendly analytics placeholder -->
+  <!-- <script defer data-domain="your-domain.com" src="https://plausible.io/js/script.js"></script> -->
 </body>
 </html>
